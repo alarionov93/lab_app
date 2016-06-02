@@ -36,6 +36,6 @@ class MarkList(models.Model):
                                 unique=False, blank=False, null=False)
 
     class Meta:
-        db_table = 'subjects'
+        db_table = 'mark_lists'
         verbose_name = 'Предмет'
         verbose_name_plural = 'Предметы'
