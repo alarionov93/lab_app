@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+
+{% block content %}
+  {% if teachers %}
+  <ul>
+  {% for t in teachers %}
+    <li>{{ t.name }}
+    <p>{{ t.subject }}</p>
+    Experienced for {{ t.ex }} years
+    <a href="{% url 'similar_teachers' t.id%}">View similar</a>
+    <a href="{% url 'most_young_student' t.id%}">Most young student passed an exam</a>
+    </li>
+  {% endfor %}
+  </ul>
+  {% else %}
+    <p>No such teachers found.</p>
+  {% endif %}
+
+{% endblock %}

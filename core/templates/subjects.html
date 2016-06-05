@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block content %}
+  <ul>
+  {% for s in subjects %}
+    <li>
+    <p>{{ s.name }}</p>
+      <a href="{% url 'most_exp_teacher' s.id %}">Get most experienced teacher</a>
+    </li>
+  {% endfor %}
+  </ul>
+{% endblock %}

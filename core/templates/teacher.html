@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+  {% for teacher in teachers %}
+  <p>{{ teacher.name }}</p>
+  <p>{{ teacher.subject }}</p>
+  <p>{{ teacher.ex }}</p>
+  {% endfor %}
+
+{% endblock %}

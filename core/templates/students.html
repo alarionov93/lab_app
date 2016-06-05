@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block content %}
+  {% if students %}
+    <ul>
+    {% for s in students %}
+      <li>{{ s.name }}</li>
+    {% endfor %}
+    </ul>
+  {% else %}
+    <p>No students found.</p>
+  {% endif %}
+
+{% endblock %}
